@@ -45,7 +45,7 @@ export default function Home({ data }) {
 }
 
 export async function getServerSideProps() {
-  const res = await axios.get("http://localhost:3000/api/news");
+  const res = await axios.get(process.env.VERCEL_URL);
   const { data } = res;
 
   if (!data) {
