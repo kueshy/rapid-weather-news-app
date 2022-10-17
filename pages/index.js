@@ -45,7 +45,7 @@ export default function Home({ data }) {
 }
 
 export async function getServerSideProps() {
-  const res = await axios.get(process.env.VERCEL_URL);
+  const res = await axios.get(process.env.CLIENT_URL);
   const { data } = res;
 
   if (!data) {
